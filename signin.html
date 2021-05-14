@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html class="signin">
+<head>
+    <script src = "https://smtpjs.com/v3/smtp.js"></script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css2?family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.1/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/magnific-popup.js/1.1.0/magnific-popup.min.css">
+    <link rel="stylesheet" href="css/style.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/magnific-popup.js/1.1.0/jquery.magnific-popup.min.js"></script>
+    <script src="js/scripts.js"></script>
+    <script src="js/email.js"></script>
+    <title>Sign in</title>
+</head>
+<body>
+    <!-- Navbar -->
+  <nav class="navbar">
+    <div class="inner-width">
+      <a href="index.html#home" class="logo"></a>
+      <button class="menu-toggler">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+      <div class="navbar-menu">
+        <a href="index.html#home">Home</a>
+        <a href="index.html#about">About</a>
+        <a href="index.html#services">Services</a>
+        <a href="index.html#awards">Awards</a>
+        <a href="index.html#works">Works</a>
+        <a href="index.html#contact">Contact</a>
+        <a href="signin.html">Sign in</a>
+      </div>
+    </div>
+  </nav>
+
+
+
+    <form class="box" method="post" action="php/register.php" style="color: white">
+        <h1>Sign In</h1>
+        <input id="nome" type="text" name="nome" placeholder="Name" required maxlength="20">
+        <input id="cognome" type="text" name="cognome" placeholder="Surname" required maxlength="20">
+        <input id="password" type="password" name="password" placeholder="Password" required maxlength="20">
+        <input id="email" type="email" name="email" placeholder="your@email.com" required maxlength="100">
+        <input class="boxTEL" id="tel" type="tel" name="telefono" pattern="[0-9]{10}" placeholder="Telephone/Cellphone" title="Formato richiesto: 1234567890" required>
+        <div class="sesso">
+            <input type="radio" name="sesso" value="M" required>Male
+            <input type="radio" name="sesso" value="F" required>Female
+            <input type="radio" name="sesso" value="A" required>Other
+        </div><br>
+        <input type="submit" value="Sign in">
+
+        <br>
+        <br>
+        <h4>Already signed in?</h4><br>
+        <a href="login.html">Click here to log in!</a>
+    </form>
+
+<!-- Footer -->
+<footer class="footerr">
+    <div class="inner-width">
+      <div class="copyright">
+        &copy; 2021 | Created for <a href="index.html#home">Globe Detective Agency</a>
+      </div>
+      <div class="sm">
+        <a href="#" class="fab fa-facebook-f"></a>
+        <a href="#" class="fab fa-twitter"></a>
+        <a href="#" class="fab fa-instagram"></a>
+        <a href="#" class="fab fa-linkedin-in"></a>
+        <a href="#" class="fab fa-youtube"></a>
+      </div>
+    </div>
+  </footer>
+</body>
+
+</html>
