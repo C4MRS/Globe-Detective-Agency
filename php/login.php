@@ -86,9 +86,7 @@ if ($count == 1) {
             $count = mysqli_num_rows($result);
         
             echo $row['nome'] . "<br>";
-            $_SESSION["nome"] = $row['nome'];
             echo $row['cognome'] . "<br>";
-            $_SESSION["cognome"] = $row['cognome'];
             echo $row['email'] . "<br>";
             echo $row['telefono'] . "<br>";
             echo $row['sesso'];
