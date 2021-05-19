@@ -41,10 +41,6 @@ $row = mysqli_fetch_assoc($result);
 $count = mysqli_num_rows($result);
 
 if ($count == 1) {
-    //Crea delle variabili di sessione in cui vengono salvate le credenziali di accesso dell'utente
-    $_SESSION["email"] = $email;
-    $_SESSION["password"] = $password;
-
     echo "Accesso riuscito, stampa dei dati: <br>";
 
     $query = "select * from investigatore where email='$email' and password='$password'";
@@ -55,6 +51,7 @@ if ($count == 1) {
     $count = mysqli_num_rows($result);
 
     echo $row['nome'] . "<br>";
+    $_SESSION["nome"] = $row['nome'];
     echo $row['cognome'] . "<br>";
     echo $row['email'] . "<br>";
     echo $row['telefono'] . "<br>";
@@ -63,10 +60,10 @@ if ($count == 1) {
         $_SESSION["ID"] = $row['ID'];
         echo "Attivazione modalità Amministratore, attendere prego!";
         sleep(5);
-        header("Location: ../AdminIndex.html");
+        header("Location: AdminIndexPage.php");
         exit();
     } else{
-            header("Location: ../invIndex.html");
+            header("Location: invIndexPage.php");
             exit();
         }
 }else
@@ -78,7 +75,6 @@ if ($count == 1) {
         if ($count == 1) {
             //Crea delle variabili di sessione in cui vengono salvate le credenziali di accesso dell'utente
             $_SESSION["email"] = $email;
-            $_SESSION["password"] = $password;
         
             echo "Accesso riuscito, stampa dei dati: <br>";
         

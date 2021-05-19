@@ -15,6 +15,11 @@
         <script src="https://cdnjs.cloudflare.com/ajax/libs/magnific-popup.js/1.1.0/jquery.magnific-popup.min.js"></script>
         <script src="js/scripts.js"></script>
         <script src="js/email.js"></script>
+        <script type="text/javascript">
+          function resetS(){
+            <?php session_unset();?>
+          }
+        </script>
         <title>Admins' Index</title>
         <style>
             *{
@@ -263,14 +268,14 @@
     </head>
     <body>
         <ul>
-            <li><a href="../adminIndex.html"><i class="fas fa-home"></i>Home</a></li>
+            <li><a href="adminIndexPage.php"><i class="fas fa-home"></i>Home</a></li>
             <li><a class="active" href="addCasefilePage.php"><i class="fas fa-file-alt" style="margin-right: 25px;"></i>Add Casefile</a></li>
             <li><a href="checkCasefilePage.php"><i class="fas fa-search"></i>Check Casefile</a></li>
             <li><a href="checkUserPage.php"><i class="fas fa-user-check"></i>Check User</a></li>
-            <li><a href="../addUser.html"><i class="fas fa-user-plus"></i>Add User</a></li>
-            <li><a href="../checkInvestigator.html"><i class="fas fa-user-check"></i>Check Investigator</a></li>
-            <li><a href="../addInvestigator.html"><i class="fas fa-user-plus"></i>Add Investigator</a></li>
-            <li><a href="../index.html"><i class="fas fa-sign-out-alt"></i>Log Out</a></li>
+            <li><a href="addUserPage.php"><i class="fas fa-user-plus"></i>Add User</a></li>
+            <li><a href="checkInvestigatorPage.php"><i class="fas fa-user-check"></i>Check Investigator</a></li>
+            <li><a href="addInvestigatorPage.php"><i class="fas fa-user-plus"></i>Add Investigator</a></li>
+            <li><a href="../index.html" onclick="resetS()"><i class="fas fa-sign-out-alt"></i>Log Out</a></li>
             <li class="logo logoadjust"></li>
         </ul>
         <div style="margin-left:21%;padding:1px 16px;height:1000px;">
@@ -306,7 +311,7 @@
     </body>
 </html>
 <?php
-    }else{
+    }elseif(isset($_SESSION["nome"])){
 ?>
 <html>
     <head>
@@ -321,6 +326,11 @@
         <script src="https://cdnjs.cloudflare.com/ajax/libs/magnific-popup.js/1.1.0/jquery.magnific-popup.min.js"></script>
         <script src="js/scripts.js"></script>
         <script src="js/email.js"></script>
+        <script type="text/javascript">
+          function resetS(){
+            <?php session_unset();?>
+          }
+        </script>
         <title>Investigators' Index</title>
         <style>
             *{
@@ -573,7 +583,7 @@
     </head>
     <body>
         <ul>
-            <li><a href="../invIndex.html"><i class="fas fa-home"></i>Home</a></li>
+            <li><a href="invIndexPage.php"><i class="fas fa-home"></i>Home</a></li>
             <li><a class="active" href="#"><i class="fas fa-file-alt" style="margin-right: 25px;"></i>Add Casefile</a></li>
             <li><a href="checkCasefilePage.php"><i class="fas fa-search"></i>Check Casefile</a></li>
             <li><a href="checkUserPage.php"><i class="fas fa-user-check"></i>Check User</a></li>
@@ -585,7 +595,7 @@
             <br>
             <br>
             <br>
-            <li><a href="index.html"><i class="fas fa-sign-out-alt"></i>Log Out</a></li>
+            <li><a href="../index.html" onclick="resetS()"><i class="fas fa-sign-out-alt"></i>Log Out</a></li>
             <li class="logo logoadjust"></li>
         </ul>
         <div style="margin-left:21%;padding:1px 16px;height:1000px;">
@@ -621,5 +631,8 @@
     </body>
 </html>
 <?php
+    }else{
+        header("location: ../login.html");
+        exit();
     }
 ?>
