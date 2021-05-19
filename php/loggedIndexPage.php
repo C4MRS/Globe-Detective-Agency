@@ -11,16 +11,11 @@ if(isset($_SESSION["email"])){
     <link href="https://fonts.googleapis.com/css2?family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.1/css/all.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/magnific-popup.js/1.1.0/magnific-popup.min.css">
-    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="../css/style.css">
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/magnific-popup.js/1.1.0/jquery.magnific-popup.min.js"></script>
     <script src="js/scripts.js"></script>
     <script src="https://smtpjs.com/v3/smtp.js"></script>
-    <script type="text/javascript">
-        function resetS(){
-            <?php session_unset();?>
-            }
-    </script>
     </head>
     <body>
     <!-- Navbar -->
@@ -39,7 +34,7 @@ if(isset($_SESSION["email"])){
             <a href="#awards">Awards</a>
             <a href="#works">Works</a>
             <a href="#contact">Contact</a>
-            <a href="../index.html" onclick="resetS()">Log out</a>
+            <a href="index.php" >Log out</a>
         </div>
         </div>
     </nav>

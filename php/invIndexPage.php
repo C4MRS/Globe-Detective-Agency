@@ -16,11 +16,6 @@ if(isset($_SESSION["nome"])){
         <script src="https://cdnjs.cloudflare.com/ajax/libs/magnific-popup.js/1.1.0/jquery.magnific-popup.min.js"></script>
         <script src="js/scripts.js"></script>
         <script src="js/email.js"></script>
-        <script type="text/javascript">
-          function resetS(){
-            <?php session_unset();?>
-          }
-        </script>
         <title>Investigators' Index</title>
     </head>
     <body>
@@ -37,7 +32,7 @@ if(isset($_SESSION["nome"])){
             <br>
             <br>
             <br>
-            <li><a href="../index.html" onclick="resetS()"><i class="fas fa-sign-out-alt"></i>Log Out</a></li>
+            <li><a href="index.php"><i class="fas fa-sign-out-alt"></i>Log Out</a></li>
             <li class="logo logoadjust"></li>
         </ul>
         <div style="margin-left:21%;padding:1px 16px;height:1000px;">

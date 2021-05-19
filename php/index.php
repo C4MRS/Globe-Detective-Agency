@@ -1,3 +1,7 @@
+<?php
+    session_start();
+    session_unset();
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -7,11 +11,10 @@
   <link href="https://fonts.googleapis.com/css2?family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.1/css/all.min.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/magnific-popup.js/1.1.0/magnific-popup.min.css">
-  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="../css/style.css">
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/magnific-popup.js/1.1.0/jquery.magnific-popup.min.js"></script>
   <script src="js/scripts.js"></script>
-  <script src="https://smtpjs.com/v3/smtp.js"></script>
 </head>
 <body>
   <!-- Navbar -->
@@ -30,7 +33,7 @@
         <a href="#awards">Awards</a>
         <a href="#works">Works</a>
         <a href="#contact">Contact</a>
-        <a href="index.html">Log out</a>
+        <a href="../signin.html">Sign in</a>
       </div>
     </div>
   </nav>
@@ -48,8 +51,8 @@
           <a href="#" class="fab fa-youtube"></a>
         </div>
         <div class="buttons">
-          <a href="#">Contact us</a>
-          <a href="#">Our jobs</a>
+          <a href="#contact">Contact us</a>
+          <a href="#services">Our Services</a>
         </div>
       </div>
     </div>
@@ -170,105 +173,105 @@
     </div>
   </section>
 
-<!-- Awards -->
-<section id="awards">
-  <div class="inner-width">
-    <h1 class="section-title">Awards</h1>
-    <div class="time-line">
-      <div class="block">
-        <h4>2021</h4>
-        <h3>Norman J. Sloan Memorial Award</h3>
-        <p>The Norman J. Sloan Memorial Award is The World Association of Detectives' highest honor and is presented at the Annual Conference. The recipients are members who have demonstrated outstanding service to the Association, and who have contributed their time, energy, leadership and dedication to the betterment of the investigation and security professions.</p>
-      </div>
+  <!-- Awards -->
+  <section id="awards">
+    <div class="inner-width">
+      <h1 class="section-title">Awards</h1>
+      <div class="time-line">
+        <div class="block">
+          <h4>2021</h4>
+          <h3>Norman J. Sloan Memorial Award</h3>
+          <p>The Norman J. Sloan Memorial Award is The World Association of Detectives' highest honor and is presented at the Annual Conference. The recipients are members who have demonstrated outstanding service to the Association, and who have contributed their time, energy, leadership and dedication to the betterment of the investigation and security professions.</p>
+        </div>
 
-      <div class="block">
-        <h4>2019 - 2020</h4>
-        <h3>Investigator of the Year</h3>
-        <p>A cup presented to the World Association of Detectives and is to be awarded to a member who has demonstrated outstanding professional service or achievement in the calendar year, or who has performed an outstanding investigation in the best traditions of the profession.</p>
-      </div>
+        <div class="block">
+          <h4>2019 - 2020</h4>
+          <h3>Investigator of the Year</h3>
+          <p>A cup presented to the World Association of Detectives and is to be awarded to a member who has demonstrated outstanding professional service or achievement in the calendar year, or who has performed an outstanding investigation in the best traditions of the profession.</p>
+        </div>
 
-      <div class="block">
-        <h4>2018 - 2020</h4>
-        <h3>Neal Holmes Sr./J.D. Vinson, Jr. Security Professional of the Year Award</h3>
-        <p>This award honors members in the security field who have demonstrated excellence, leadership, and business acumen in an entrepreneurial endeavor.</p>
-      </div>
+        <div class="block">
+          <h4>2018 - 2020</h4>
+          <h3>Neal Holmes Sr./J.D. Vinson, Jr. Security Professional of the Year Award</h3>
+          <p>This award honors members in the security field who have demonstrated excellence, leadership, and business acumen in an entrepreneurial endeavor.</p>
+        </div>
 
-      <div class="block">
-        <h4>2018 - 2021</h4>
-        <h3>Hal Lipset Truth in Action Award</h3>
-        <p>This award is presented to an individual for service to mankind by outstanding acts of compassion or heroism or leadership or achievement and service.</p>
-      </div>
+        <div class="block">
+          <h4>2018 - 2021</h4>
+          <h3>Hal Lipset Truth in Action Award</h3>
+          <p>This award is presented to an individual for service to mankind by outstanding acts of compassion or heroism or leadership or achievement and service.</p>
+        </div>
 
-      <div class="block">
-        <h4>2017 - 2021</h4>
-        <h3>Consumer Choice Award Winners For The Best Private Investigators</h3>
-        <p>The Globe Detective Agency since day one has taken a proud stance on the fact that “We Think Different.” We want to not only be a positive change and service to our clients but a positive difference in our industry and community. We have won various awards within the industry, but the Consumers Choice Award for Business Excellence certainly stands out. We are thankful for our customers and clients, and we vow to continue offering the best investigative services throughout Canada in Toronto, Calgary and Halifax as well as all the other areas we service. Thank you!</p>
-      </div>
+        <div class="block">
+          <h4>2017 - 2021</h4>
+          <h3>Consumer Choice Award Winners For The Best Private Investigators</h3>
+          <p>The Globe Detective Agency since day one has taken a proud stance on the fact that “We Think Different.” We want to not only be a positive change and service to our clients but a positive difference in our industry and community. We have won various awards within the industry, but the Consumers Choice Award for Business Excellence certainly stands out. We are thankful for our customers and clients, and we vow to continue offering the best investigative services throughout Canada in Toronto, Calgary and Halifax as well as all the other areas we service. Thank you!</p>
+        </div>
 
-      <div class="block">
-        <h4>2017</h4>
-        <h3>Global Excellence Award</h3>
-        <p>Won the Global Excellence Award of 2017 as the Most Trusted Private Investigation Services Provider.</p>
+        <div class="block">
+          <h4>2017</h4>
+          <h3>Global Excellence Award</h3>
+          <p>Won the Global Excellence Award of 2017 as the Most Trusted Private Investigation Services Provider.</p>
+        </div>
       </div>
     </div>
-  </div>
-</section>
+  </section>
 
-<!-- Works -->
-<section id="works" class="dark">
-  <div class="inner-width">
-    <h1 class="section-title">Works</h1>
-    <div class="works">
-      <a href="images/works/alley.jpg" class="work">
-        <img src="images/works/alley.jpg" alt="">
-        <div class="info">
-          <h3>Homicide in an Alley</h3>
-          <div class="cat">Missing People, Resolved</div>
-        </div>
-      </a>
+  <!-- Works -->
+  <section id="works" class="dark">
+    <div class="inner-width">
+      <h1 class="section-title">Works</h1>
+      <div class="works">
+        <a href="images/works/alley.jpg" class="work">
+          <img src="images/works/alley.jpg" alt="">
+          <div class="info">
+            <h3>Homicide in an Alley</h3>
+            <div class="cat">Missing People, Resolved</div>
+          </div>
+        </a>
 
-      <a href="images/works/clue.jpg" class="work">
-        <img src="images/works/clue.jpg" alt="">
-        <div class="info">
-          <h3>Attempted Murder</h3>
-          <div class="cat">Law, Resolved</div>
-        </div>
-      </a>
+        <a href="images/works/clue.jpg" class="work">
+          <img src="images/works/clue.jpg" alt="">
+          <div class="info">
+            <h3>Attempted Murder</h3>
+            <div class="cat">Law, Resolved</div>
+          </div>
+        </a>
 
-      <a href="images/works/crimescene.jpg" class="work">
-        <img src="images/works/crimescene.jpg" alt="">
-        <div class="info">
-          <h3>Homicide in the Woods</h3>
-          <div class="cat">Law, Resolved</div>
-        </div>
-      </a>
+        <a href="images/works/crimescene.jpg" class="work">
+          <img src="images/works/crimescene.jpg" alt="">
+          <div class="info">
+            <h3>Homicide in the Woods</h3>
+            <div class="cat">Law, Resolved</div>
+          </div>
+        </a>
 
-      <a href="images/works/missingweapon.jpeg" class="work">
-        <img src="images/works/missingweapon.jpg" alt="">
-        <div class="info">
-          <h3>Missing Glock 19</h3>
-          <div class="cat">Asset Recovery, Resolved</div>
-        </div>
-      </a>
+        <a href="images/works/missingweapon.jpeg" class="work">
+          <img src="images/works/missingweapon.jpg" alt="">
+          <div class="info">
+            <h3>Missing Glock 19</h3>
+            <div class="cat">Asset Recovery, Resolved</div>
+          </div>
+        </a>
 
-      <a href="images/works/window.png" class="work">
-        <img src="images/works/window.png" alt="">
-        <div class="info">
-          <h3>Housebreaking</h3>
-          <div class="cat">Family Investigation, Resolved</div>
-        </div>
-      </a>
+        <a href="images/works/window.png" class="work">
+          <img src="images/works/window.png" alt="">
+          <div class="info">
+            <h3>Housebreaking</h3>
+            <div class="cat">Family Investigation, Resolved</div>
+          </div>
+        </a>
 
-      <a href="images/works/piracycase.png" class="work">
-        <img src="images/works/piracycase.png" alt="">
-        <div class="info">
-          <h3>Anti-Piracy</h3>
-          <div class="cat">Law, Resolved</div>
-        </div>
-      </a>
+        <a href="images/works/piracycase.png" class="work">
+          <img src="images/works/piracycase.png" alt="">
+          <div class="info">
+            <h3>Anti-Piracy</h3>
+            <div class="cat">Law, Resolved</div>
+          </div>
+        </a>
+      </div>
     </div>
-  </div>
-</section>
+  </section>
 
   <!-- Contact -->
   <section id="contact">
@@ -291,29 +294,9 @@
         </div>
       </div>
 
-      <script>
-        function TESTING(mex){
-          alert(mex);
-        }
-        function emailCheck(subject, message) {
-          Email.send({
-              Host: "smtp.gmail.com",
-              Username: "mannaggamarinrammachiav@gmail.com",
-              Password: "ihjP0NrM9lol",
-              To: "difendiamolanoia@gmail.com",
-              From: "mannaggamarinrammachiav@gmail.com",
-              Subject: subject,
-              Body: message,
-          })
-          .then(function (message) {
-              alert("Email inviata!")
-          });
-        }
-      </script>
-
-      <form action="javascript:emailCheck(subject.value, message.value)" class="contact-form">
-        <input id="subject" type="text" class="subjectZone" placeholder="Subject" required>
-        <textarea id="message" class="messageZone" placeholder="Message" required></textarea>
+      <form action="javascript:alert('You are not logged in!')" class="contact-form">
+        <input type="text" class="subjectZone" placeholder="Subject" required>
+        <textarea class="messageZone" placeholder="Message" required></textarea>
         <input type="submit" value="Send Message" class="btn">
       </form>
     </div>
