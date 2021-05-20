@@ -58,7 +58,7 @@ if(isset($_SESSION["ID"])){
                     <label>Cellphone</label>
                   </div>
                   <div class="user-box">
-                    <input type="tel" name="cell" pattern="[0-1]{1}" title="1 - Admin permission | 0 - Investigator permission" required>
+                    <input type="tel" name="admin" pattern="[0-1]{1}" title="1 - Admin permission | 0 - Investigator permission" required>
                     <label>Admin</label>
                   </div>
                   <a>

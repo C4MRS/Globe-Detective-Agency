@@ -7,6 +7,7 @@ $gender = $_POST["gender"];
 $email = $_POST["email"];
 $password = $_POST["password"];
 $cell = $_POST["cell"];
+$admin = $_POST["admin"];
 
 function controllo($conn_info, $query)
 {
@@ -27,11 +28,11 @@ if ($link) {
 
 $link->select_db($db_name);
 
-$sql = "INSERT INTO cliente (nome, cognome, sesso, email, password, cell) values (?, ?, ?, ?, ?, ?)";
+$sql = "INSERT INTO investigatore (nome, cognome, sesso, email, password, cell, admin) values (?, ?, ?, ?, ?, ?, ?)";
 $stmt = $link->prepare($sql);
-$stmt->bind_param("ssssss", $name, $surname, $gender, $email, $password, $cell);
+$stmt->bind_param("ssssssi", $name, $surname, $gender, $email, $password, $cell, $admin);
 
-$sql = "select email from cliente where email='$email'";
+$sql = "select email from investigatore where email='$email'";
 $result = mysqli_query($link, $sql);
 $count = mysqli_num_rows($result);
 
@@ -131,9 +132,14 @@ if ($count == 1) {
         <script src="https://cdnjs.cloudflare.com/ajax/libs/magnific-popup.js/1.1.0/jquery.magnific-popup.min.js"></script>
         <script src="js/scripts.js"></script>
         <script src="js/email.js"></script>
+        <script>
+            function myFunction() {
+                alert("Investigator added successfully!");
+            }
+        </script>
         <title>Admins' Index</title>
     </head>
-    <body>
+    <body onload="myFunction()">
         <ul>
             <li><a href="adminIndexPage.php"><i class="fas fa-home"></i>Home</a></li>
             <li><a href="addCasefilePage.php"><i class="fas fa-file-alt" style="margin-right: 25px;"></i>Add Casefile</a></li>
@@ -174,7 +180,7 @@ if ($count == 1) {
                     <label>Cellphone</label>
                   </div>
                   <div class="user-box">
-                    <input type="tel" name="cell" pattern="[0-1]{1}" title="1 - Admin permission | 0 - Investigator permission" required>
+                    <input type="tel" name="admin" pattern="[0-1]{1}" title="1 - Admin permission | 0 - Investigator permission" required>
                     <label>Admin</label>
                   </div>
                   <a>

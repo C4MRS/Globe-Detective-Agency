@@ -98,10 +98,9 @@ if ($count == 1) {
             </div>
         </body>
     </html>
-}
 <?php
     }else{?>
-        <html>
+    <html>
         <head>
             <script src = "https://smtpjs.com/v3/smtp.js"></script>
             <meta charset="UTF-8">
@@ -171,9 +170,8 @@ if ($count == 1) {
         </body>
     </html>
 <?php
-    }else{
-            echo "Casefile inesistente o non hai i permessi per visualizzarlo, verrai reindirizzato alla pagina di ricerca.";
-            sleep(5);
-            header("Location: checkCasefilePage.php");
-        }
+}}else{
+        header("Location: checkCasefilePage.php");
+        exit();
+}
 ?>

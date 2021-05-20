@@ -127,9 +127,14 @@ if ($count == 1) {
         <script src="https://cdnjs.cloudflare.com/ajax/libs/magnific-popup.js/1.1.0/jquery.magnific-popup.min.js"></script>
         <script src="js/scripts.js"></script>
         <script src="js/email.js"></script>
+        <script>
+            function myFunction() {
+                alert("User added successfully!");
+            }
+        </script>
         <title>Admins' Index</title>
     </head>
-    <body>
+    <body onload="myFunction()">
         <ul>
             <li><a href="adminIndexPage.php"><i class="fas fa-home"></i>Home</a></li>
             <li><a href="addCasefilePage.php"><i class="fas fa-file-alt" style="margin-right: 25px;"></i>Add Casefile</a></li>
