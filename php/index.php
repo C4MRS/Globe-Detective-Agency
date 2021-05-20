@@ -14,7 +14,7 @@
   <link rel="stylesheet" href="../css/style.css">
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/magnific-popup.js/1.1.0/jquery.magnific-popup.min.js"></script>
-  <script src="js/scripts.js"></script>
+  <script src="../js/scripts.js"></script>
 </head>
 <body>
   <!-- Navbar -->
@@ -63,7 +63,7 @@
     <div class="inner-width">
       <h1 class="section-title">About</h1>
       <div class="about-content">
-        <img src="images/GDA_logo_auto_x2.png" alt="" class="about-pic">
+        <img src="../images/GDA_logo_auto_x2.png" alt="" class="about-pic">
         <div class="about-text">
           <h2>Hi! We're Globe Detective Agency</h2>
           <h3>
@@ -222,48 +222,48 @@
     <div class="inner-width">
       <h1 class="section-title">Works</h1>
       <div class="works">
-        <a href="images/works/alley.jpg" class="work">
-          <img src="images/works/alley.jpg" alt="">
+        <a href="../images/works/alley.jpg" class="work">
+          <img src="../images/works/alley.jpg" alt="">
           <div class="info">
             <h3>Homicide in an Alley</h3>
             <div class="cat">Missing People, Resolved</div>
           </div>
         </a>
 
-        <a href="images/works/clue.jpg" class="work">
-          <img src="images/works/clue.jpg" alt="">
+        <a href="../images/works/clue.jpg" class="work">
+          <img src="../images/works/clue.jpg" alt="">
           <div class="info">
             <h3>Attempted Murder</h3>
             <div class="cat">Law, Resolved</div>
           </div>
         </a>
 
-        <a href="images/works/crimescene.jpg" class="work">
-          <img src="images/works/crimescene.jpg" alt="">
+        <a href="../images/works/crimescene.jpg" class="work">
+          <img src="../images/works/crimescene.jpg" alt="">
           <div class="info">
             <h3>Homicide in the Woods</h3>
             <div class="cat">Law, Resolved</div>
           </div>
         </a>
 
-        <a href="images/works/missingweapon.jpeg" class="work">
-          <img src="images/works/missingweapon.jpg" alt="">
+        <a href="../images/works/missingweapon.jpeg" class="work">
+          <img src="../images/works/missingweapon.jpg" alt="">
           <div class="info">
             <h3>Missing Glock 19</h3>
             <div class="cat">Asset Recovery, Resolved</div>
           </div>
         </a>
 
-        <a href="images/works/window.png" class="work">
-          <img src="images/works/window.png" alt="">
+        <a href="../images/works/window.png" class="work">
+          <img src="../images/works/window.png" alt="">
           <div class="info">
             <h3>Housebreaking</h3>
             <div class="cat">Family Investigation, Resolved</div>
           </div>
         </a>
 
-        <a href="images/works/piracycase.png" class="work">
-          <img src="images/works/piracycase.png" alt="">
+        <a href="../images/works/piracycase.png" class="work">
+          <img src="../images/works/piracycase.png" alt="">
           <div class="info">
             <h3>Anti-Piracy</h3>
             <div class="cat">Law, Resolved</div>
