@@ -659,6 +659,47 @@ footer{
 @media screen and (max-width: 600px){
   .inner-width{
     padding: 0 20px;
+    max-width: 500px;
+  }
+  .logo{
+    width: 75px;
+    background-repeat: no-repeat;
+  }
+  .menu-toggler{
+    top:50px;
+    left:-50px;
+  }
+
+  .sticky{
+    background-color: transparent;
+  }
+
+  .sticky .logo{
+    background-image: url(../images/GDA_logo_invertito.png);
+  }
+
+  .menu-toggler span{
+    background-color: violet;
+  }
+
+  .navbar-menu.active{
+    right:0px;
+    margin-left: 0px;
+    position: fixed;
+    height: 100vh;
+    width: 90%;
+    max-width: 800px;
+  }
+
+  .sticky .menu-toggler span{
+    background-color: violet;
+  }
+
+  .sticky .navbar-menu{
+    background-color: #353b48;
+  }
+  .sticky .navbar-menu a{
+    color: white !important;
   }
 
   .skill{
@@ -675,6 +716,20 @@ footer{
 
   .nameZone, .emailZone{
     max-width: 100%;
+  }
+  .box{
+    width: fit-content;
+    height: fit-content;
+  }
+  footer{
+    width: 120%;
+    margin-bottom: -70px;
+    margin-left: -220px;
+  }
+
+  .navbar{
+    width: fit-content;
+    height: fit-content;
   }
 }
 
