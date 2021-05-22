@@ -70,13 +70,11 @@ if ($count == 1) {
     echo $row['sesso'];
     if ($row['admin'] == 1) {
         $_SESSION["ID"] = $row['ID'];
-        echo "Attivazione modalità Amministratore, attendere prego!";
-        sleep(5);
         header("Location: AdminIndexPage.php");
         exit();
     } else{
-            header("Location: invIndexPage.php");
-            exit();
+        header("Location: invIndexPage.php");
+        exit();
         }
 }else
     {
