@@ -107,22 +107,6 @@ if ($count == 1) {
 <?php
 } else {
     $stmt->execute();
-    echo "<br>Il tuo nome è: " . $nome;
-    echo "<br>Il tuo cognome è: " . $cognome;
-    echo "<br>La tua email è: " . $email;
-    echo "<br>La tua password è: " . $password;
-    echo "<br>La tua email è: " . $email;
-    echo "<br>Il tuo numero di telefono è: " . $telefono;
-    if ($sesso == "M")
-        echo "<br> Il tuo sesso è: Maschio";
-    elseif ($sesso == "F")
-        echo "<br> Il tuo sesso è: Femmina";
-    else
-        echo "<br> Il tuo sesso è: Altro";
-
-
-    echo "Ora verrai reindirizzato alla pagina di Login!";
-    sleep(5);
     header("Location: ../login.html");
     exit();
 }
