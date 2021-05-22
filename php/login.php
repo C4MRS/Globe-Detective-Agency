@@ -7,9 +7,9 @@ function alert($msg)
     echo "<script type='text/javascript'>alert('$msg');</script>";
 }
 
-
 $email = $_POST['email'];
-$password = $_POST['password'];
+//$password = generate_hash($_POST['password']);
+//echo $password;
 
 function controllo($conn_info, $query)     //Controlla in quel determinato collegamento se il comando inviato è stato eseguito con successo
 {
@@ -33,6 +33,18 @@ if ($link) {
 
 $link->select_db($db_name);
 
+//Ricavo della password tramite email cosicché sia possibile effettuare un confronto tra la password salvata nel database e la password inserita dall'utente
+$query = "select email, password from cliente where email='$email'";
+
+$result = mysqli_query($link, $query);  //Restituisce un true o false in base al completamento della query
+$row = mysqli_fetch_assoc($result);
+
+$count = mysqli_num_rows($result);
+if($count == 1){
+    $testingpw = $row['password'];
+}
+$length = strlen($testingpw);
+$password = substr(crypt($_POST["password"],$testingpw), 0, $length);
 $query = "select email, password from investigatore where email='$email' and password='$password'";
 
 $result = mysqli_query($link, $query);  //Restituisce un true o false in base al completamento della query
@@ -54,7 +66,7 @@ if ($count == 1) {
     $_SESSION["nome"] = $row['nome'];
     echo $row['cognome'] . "<br>";
     echo $row['email'] . "<br>";
-    echo $row['telefono'] . "<br>";
+    echo $row['cell'] . "<br>";
     echo $row['sesso'];
     if ($row['admin'] == 1) {
         $_SESSION["ID"] = $row['ID'];
@@ -88,9 +100,9 @@ if ($count == 1) {
             echo $row['nome'] . "<br>";
             echo $row['cognome'] . "<br>";
             echo $row['email'] . "<br>";
-            echo $row['telefono'] . "<br>";
+            echo $row['cell'] . "<br>";
             echo $row['sesso'];
-            header("Location: ../loggedIndex.html");
+            header("Location: loggedIndexPage.php");
             exit();
         }
     }
