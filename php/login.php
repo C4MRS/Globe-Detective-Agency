@@ -83,7 +83,7 @@ if ($count == 1) {
         $row = mysqli_fetch_assoc($result);
         $count = mysqli_num_rows($result);
         if ($count == 1) {
-            //Crea delle variabili di sessione in cui vengono salvate le credenziali di accesso dell'utente
+            //Crea una variabile di sessione in cui viene salvata l'email la quale utilizzerò in futuro
             $_SESSION["email"] = $email;
         
             echo "Accesso riuscito, stampa dei dati: <br>";

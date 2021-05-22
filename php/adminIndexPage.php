@@ -1,6 +1,6 @@
 <?php
 session_start();
-if(isset($_SESSION["ID"])){
+if(isset($_SESSION["ID"])){ //Controlla se l'utente è loggato come ADMIN
 ?>
 <html class="signin" onload="admin()">
     <head>

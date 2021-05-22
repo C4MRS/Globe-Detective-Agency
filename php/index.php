@@ -1,6 +1,6 @@
 <?php
     session_start();
-    session_unset();
+    session_unset(); //Reset delle variabili di sessione così da effettuare un log out
 ?>
 <!DOCTYPE html>
 <html lang="en">

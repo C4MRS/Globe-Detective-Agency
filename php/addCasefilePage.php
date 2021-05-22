@@ -1,6 +1,6 @@
 <?php
     session_start();
-    if(isset($_SESSION["ID"])){
+    if(isset($_SESSION["ID"])){ //Controlla se l'utente è loggato come ADMIN
 ?>
 <html>
     <head>
@@ -62,7 +62,7 @@
     </body>
 </html>
 <?php
-    }elseif(isset($_SESSION["nome"])){
+    }elseif(isset($_SESSION["nome"])){ //Controlla se l'utente è loggato come INVESTIGATORE
 ?>
 <html>
     <head>

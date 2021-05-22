@@ -1,6 +1,6 @@
 <?php
 session_start();
-if(isset($_SESSION["nome"])){
+if(isset($_SESSION["nome"])){ //Controlla se l'utente è loggato come INVESTIGATORE
 ?>
 <html class="signin">
     <head>
