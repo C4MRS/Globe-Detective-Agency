@@ -14,7 +14,7 @@ if(isset($_SESSION["email"])){ //Controlla se l'utente è loggato
     <link rel="stylesheet" href="../css/style.css">
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/magnific-popup.js/1.1.0/jquery.magnific-popup.min.js"></script>
-    <script src="js/scripts.js"></script>
+    <script src="../js/scripts.js"></script>
     <script src="https://smtpjs.com/v3/smtp.js"></script>
     </head>
     <body>
@@ -64,7 +64,7 @@ if(isset($_SESSION["email"])){ //Controlla se l'utente è loggato
         <div class="inner-width">
         <h1 class="section-title">About</h1>
         <div class="about-content">
-            <img src="images/GDA_logo_auto_x2.png" alt="" class="about-pic">
+            <img src="../images/GDA_logo_auto_x2.png" alt="" class="about-pic">
             <div class="about-text">
             <h2>Hi! We're Globe Detective Agency</h2>
             <h3>
@@ -223,48 +223,48 @@ if(isset($_SESSION["email"])){ //Controlla se l'utente è loggato
     <div class="inner-width">
         <h1 class="section-title">Works</h1>
         <div class="works">
-        <a href="images/works/alley.jpg" class="work">
-            <img src="images/works/alley.jpg" alt="">
+        <a href="../images/works/alley.jpg" class="work">
+            <img src="../images/works/alley.jpg" alt="">
             <div class="info">
             <h3>Homicide in an Alley</h3>
             <div class="cat">Missing People, Resolved</div>
             </div>
         </a>
 
-        <a href="images/works/clue.jpg" class="work">
-            <img src="images/works/clue.jpg" alt="">
+        <a href="../images/works/clue.jpg" class="work">
+            <img src="../images/works/clue.jpg" alt="">
             <div class="info">
             <h3>Attempted Murder</h3>
             <div class="cat">Law, Resolved</div>
             </div>
         </a>
 
-        <a href="images/works/crimescene.jpg" class="work">
-            <img src="images/works/crimescene.jpg" alt="">
+        <a href="../images/works/crimescene.jpg" class="work">
+            <img src="../images/works/crimescene.jpg" alt="">
             <div class="info">
             <h3>Homicide in the Woods</h3>
             <div class="cat">Law, Resolved</div>
             </div>
         </a>
 
-        <a href="images/works/missingweapon.jpeg" class="work">
-            <img src="images/works/missingweapon.jpg" alt="">
+        <a href="../images/works/missingweapon.jpeg" class="work">
+            <img src="../images/works/missingweapon.jpg" alt="">
             <div class="info">
             <h3>Missing Glock 19</h3>
             <div class="cat">Asset Recovery, Resolved</div>
             </div>
         </a>
 
-        <a href="images/works/window.png" class="work">
-            <img src="images/works/window.png" alt="">
+        <a href="../images/works/window.png" class="work">
+            <img src="../images/works/window.png" alt="">
             <div class="info">
             <h3>Housebreaking</h3>
             <div class="cat">Family Investigation, Resolved</div>
             </div>
         </a>
 
-        <a href="images/works/piracycase.png" class="work">
-            <img src="images/works/piracycase.png" alt="">
+        <a href="../images/works/piracycase.png" class="work">
+            <img src="../images/works/piracycase.png" alt="">
             <div class="info">
             <h3>Anti-Piracy</h3>
             <div class="cat">Law, Resolved</div>
@@ -295,31 +295,37 @@ if(isset($_SESSION["email"])){ //Controlla se l'utente è loggato
             </div>
         </div>
 
-        <script>
-            function TESTING(mex){
-            alert(mex);
-            }
-            function emailCheck(subject, message) {
-            Email.send({
-                Host: "smtp.gmail.com",
-                Username: "mannaggamarinrammachiav@gmail.com",
-                Password: "ihjP0NrM9lol",
-                To: "difendiamolanoia@gmail.com",
-                From: "mannaggamarinrammachiav@gmail.com",
-                Subject: subject,
-                Body: message,
-            })
-            .then(function (message) {
-                alert("Email inviata!")
-            });
-            }
-        </script>
-
-        <form action="javascript:emailCheck(subject.value, message.value)" class="contact-form">
-            <input id="subject" type="text" class="subjectZone" placeholder="Subject" required>
-            <textarea id="message" class="messageZone" placeholder="Message" required></textarea>
-            <input type="submit" value="Send Message" class="btn">
+        <form action="" method="post" class="contact-form myform">
+            <input name="subject" type="text" class="subjectZone" placeholder="Subject" required>
+            <textarea name="message" class="messageZone" placeholder="Message" required></textarea>
+            <input name="submit" type="submit" value="Send Message" class="btn">
         </form>
+        <script>
+            $(document).ready(function() {
+                $('.myform').on('submit',function(){
+
+                            // Add text 'loading...' right after clicking on the submit button. 
+                            $('.output_message').text('Loading...');
+
+                            var form = $(this);
+                                $.ajax({
+                                url: "email.php",
+                                method: form.attr('method'),
+                                data: form.serialize(),
+                                success: function(result){
+                            if (result == 'success'){
+                                $('.output_message').text('Message Sent!');  
+                            } else {
+                                $('.output_message').text('Error Sending email!');
+                            }
+                        }
+                    });
+
+                    // Prevents default submission of the form after clicking on the submit button. 
+                    return false;   
+                });
+            });
+        </script>
         </div>
     </section>
 
