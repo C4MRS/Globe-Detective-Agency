@@ -62,12 +62,7 @@ if ($count == 1) {
 
     $count = mysqli_num_rows($result);
 
-    echo $row['nome'] . "<br>";
     $_SESSION["nome"] = $row['nome'];
-    echo $row['cognome'] . "<br>";
-    echo $row['email'] . "<br>";
-    echo $row['cell'] . "<br>";
-    echo $row['sesso'];
     if ($row['admin'] == 1) {
         $_SESSION["ID"] = $row['ID'];
         header("Location: AdminIndexPage.php");
@@ -75,7 +70,7 @@ if ($count == 1) {
     } else{
         header("Location: invIndexPage.php");
         exit();
-        }
+    }
 }else
     {
         $query = "select email, password from cliente where email='$email' and password='$password'";
@@ -85,21 +80,6 @@ if ($count == 1) {
         if ($count == 1) {
             //Crea una variabile di sessione in cui viene salvata l'email la quale utilizzerò in futuro
             $_SESSION["email"] = $email;
-        
-            echo "Accesso riuscito, stampa dei dati: <br>";
-        
-            $query = "select * from cliente where email='$email' and password='$password'";
-        
-            $result = mysqli_query($link, $query);
-            $row = mysqli_fetch_assoc($result);
-        
-            $count = mysqli_num_rows($result);
-        
-            echo $row['nome'] . "<br>";
-            echo $row['cognome'] . "<br>";
-            echo $row['email'] . "<br>";
-            echo $row['cell'] . "<br>";
-            echo $row['sesso'];
             header("Location: loggedIndexPage.php");
             exit();
         }
