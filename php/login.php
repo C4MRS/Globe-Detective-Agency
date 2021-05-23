@@ -40,9 +40,22 @@ $row = mysqli_fetch_assoc($result);
 $count = mysqli_num_rows($result);
 if($count == 1){
     $testingpw = $row['password'];
+    $length = strlen($testingpw);
+    $password = substr(crypt($_POST["password"],$testingpw), 0, $length);
 }
-$length = strlen($testingpw);
-$password = substr(crypt($_POST["password"],$testingpw), 0, $length);
+
+$query = "select email, password from investigatore where email='$email'";
+
+$result = mysqli_query($link, $query);  //Restituisce un true o false in base al completamento della query
+$row = mysqli_fetch_assoc($result);
+
+$count = mysqli_num_rows($result);
+if($count == 1){
+    $testingpw = $row['password'];
+    $length = strlen($testingpw);
+    $password = substr(crypt($_POST["password"],$testingpw), 0, $length);
+}
+
 $query = "select email, password from investigatore where email='$email' and password='$password'";
 
 $result = mysqli_query($link, $query);  //Restituisce un true o false in base al completamento della query
