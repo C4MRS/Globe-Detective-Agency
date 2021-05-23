@@ -33,7 +33,7 @@
         <a href="#awards">Awards</a>
         <a href="#works">Works</a>
         <a href="#contact">Contact</a>
-        <a href="../signin.html">Sign in</a>
+        <a href="../signup.html">Sign in</a>
       </div>
     </div>
   </nav>
