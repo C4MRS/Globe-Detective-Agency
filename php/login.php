@@ -8,8 +8,6 @@ function alert($msg)
 }
 
 $email = $_POST['email'];
-//$password = generate_hash($_POST['password']);
-//echo $password;
 
 function controllo($conn_info, $query)     //Controlla in quel determinato collegamento se il comando inviato è stato eseguito con successo
 {
