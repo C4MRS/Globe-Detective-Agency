@@ -5,7 +5,7 @@ $name = $_POST["name"];
 $surname = $_POST["surname"];
 $gender = $_POST["gender"];
 $email = $_POST["email"];
-$password = $_POST["password"];
+$password = password_hash($_POST["password"], PASSWORD_DEFAULT);
 $cell = $_POST["cell"];
 
 function controllo($conn_info, $query)
