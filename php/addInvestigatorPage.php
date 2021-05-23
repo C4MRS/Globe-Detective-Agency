@@ -61,6 +61,17 @@ if(isset($_SESSION["ID"])){ //Controlla se l'utente è loggato come ADMIN
                     <input type="tel" name="admin" pattern="[0-1]{1}" title="1 - Admin permission | 0 - Investigator permission" required>
                     <label>Admin</label>
                   </div>
+                  <div class="user-box">
+                  <br><br><label>Specialization</label>
+                    <select name="Specialization">
+                      <option value="Missing People">Missing People</option>
+                      <option value="Marital infidelity">Marital infidelity</option>
+                      <option value="Environmental Remediation">Environmental Remediation</option>
+                      <option value="Business Investigations">Business Investigations</option>
+                      <option value="Asset Recovery">Asset Recovery</option>
+                      <option value="Family Investigations">Family Investigations</option>
+                    </select><br><br>
+                  </div>
                   <a>
                     <span></span>
                     <span></span>
