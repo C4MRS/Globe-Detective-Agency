@@ -14,7 +14,7 @@
       }
    }
 
-   $conn = mysqli_connect("localhost", "raffaelesulipano", "", "my_raffaelesulipano");
+   $conn = mysqli_connect("localhost", "root", "", "gda");
 
    mail("difendiamolanoia@gmail.com", $ogg, $content);
 
