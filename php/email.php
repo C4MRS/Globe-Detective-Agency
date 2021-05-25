@@ -1,17 +1,24 @@
 <?php
-     if (isset($_POST['submit'])) {
-        $name = "raff";
-        $subjects = $_REQUEST["subject"];
-        $email = "difendiamolanoia77@gmail.com";
-        $message = $_REQUEST['message'];
+   session_start();
 
-      // Set your email address where you want to receive emails. 
-       $to = 'difendiamolanoia@gmail.com';
-       $subject = $subjects;
-       $headers = "From: ".$name." <".$email."> \r\n";
-       $send_email = mail($to,$subject,$message,$headers);
+   $subject = $_POST["subject"];
 
-       echo ($send_email) ? 'success' : 'error';
+   $content = "From: " . $_SESSION["email"] . "\nMsg:\n" . $_POST["message"] . "\n\nMessage End!!";
 
-    }
-?>
+   function controllo($conn_info, $query)
+   {
+      if (mysqli_query($conn_info, $query)) {
+         echo "Comando eseguito con successo<br>";
+      } else {
+         echo mysqli_error($conn_info);
+      }
+   }
+
+   $conn = mysqli_connect("localhost", "raffaelesulipano", "", "my_raffaelesulipano");
+
+   mail("difendiamolanoia@gmail.com", $ogg, $content);
+
+   echo "<script>
+         alert('Message sent successfully! You will now be redirected at the Homepage!');
+         window.location = 'loggedindex.php#contact';
+         </script>";

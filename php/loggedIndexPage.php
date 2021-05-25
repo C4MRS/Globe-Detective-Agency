@@ -295,37 +295,11 @@ if(isset($_SESSION["email"])){ //Controlla se l'utente è loggato
             </div>
         </div>
 
-        <form action="" method="post" class="contact-form myform">
+        <form action="email.php" method="post" class="contact-form myform">
             <input name="subject" type="text" class="subjectZone" placeholder="Subject" required>
             <textarea name="message" class="messageZone" placeholder="Message" required></textarea>
-            <input name="submit" type="submit" value="Send Message" class="btn">
+            <input type="submit" value="Send Message" class="btn">
         </form>
-        <script>
-            $(document).ready(function() {
-                $('.myform').on('submit',function(){
-
-                            // Add text 'loading...' right after clicking on the submit button. 
-                            $('.output_message').text('Loading...');
-
-                            var form = $(this);
-                                $.ajax({
-                                url: "email.php",
-                                method: form.attr('method'),
-                                data: form.serialize(),
-                                success: function(result){
-                            if (result == 'success'){
-                                $('.output_message').text('Message Sent!');  
-                            } else {
-                                $('.output_message').text('Error Sending email!');
-                            }
-                        }
-                    });
-
-                    // Prevents default submission of the form after clicking on the submit button. 
-                    return false;   
-                });
-            });
-        </script>
         </div>
     </section>
 
