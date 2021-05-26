@@ -14,7 +14,7 @@ if(isset($_SESSION["ID"])){ //Controlla se l'utente è loggato come ADMIN
         <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/magnific-popup.js/1.1.0/jquery.magnific-popup.min.js"></script>
         <script src="js/scripts.js"></script>
-        <script src="js/email.js"></script>
+        <script src="../js/checkEmail.js"></script>
         <title>Admins' Index</title>
     </head>
     <body>
@@ -34,16 +34,10 @@ if(isset($_SESSION["ID"])){ //Controlla se l'utente è loggato come ADMIN
                 <h2>Check an existing Investigator</h2>
                 <form method="post" action="checkInvestigator.php">
                   <div class="user-box">
-                    <input type="email" name="email" title="Insert investigator's email" required>
+                    <input type="email" id="email" name="email" title="Insert investigator's email" oninput="showCustomer(document.getElementById('email').value,'i')" required>
                     <label>Email</label>
+                    <div id="txtHint"></div><br><br>
                   </div>
-                  <a>
-                    <span></span>
-                    <span></span>
-                    <span></span>
-                    <span></span>
-                    <input type="submit" value="SUBMIT">
-                  </a>
                 </form>
               </div>
         </div>

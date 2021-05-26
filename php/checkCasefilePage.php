@@ -14,7 +14,7 @@
         <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/magnific-popup.js/1.1.0/jquery.magnific-popup.min.js"></script>
         <script src="js/scripts.js"></script>
-        <script src="js/email.js"></script>
+        <script src="../js/checkEmail.js"></script>
         <title>Admins' Index</title>
     </head>
     <body>
@@ -32,18 +32,12 @@
         <div style="margin-left:21%;padding:1px 16px;height:1000px;">
             <div class="boxCasefile">
                 <h2>Check an existing Casefile</h2>
-                <form method="post" action="checkCasefile.php" id="cCasefileForm">
+                <form method="post" action="" id="cCasefileForm">
                   <div class="user-box">
-                    <input type="text" name="title" title="Insert casefile's title" required>
+                    <input type="text" id="title" name="title" title="Insert casefile's title" oninput="showCustomer(document.getElementById('title').value,'c')" required>
                     <label>Title</label>
+                    <div id="txtHint"></div><br><br>
                   </div>
-                  <a>
-                    <span></span>
-                    <span></span>
-                    <span></span>
-                    <span></span>
-                    <input type="submit" value="SUBMIT">
-                  </a>
                 </form>
               </div>
         </div>
@@ -87,7 +81,7 @@
         <div style="margin-left:21%;padding:1px 16px;height:1000px;">
             <div class="boxCasefile">
                 <h2>Check an existing Casefile</h2>
-                <form method="post" action="checkCasefile.php" id="cCasefileForm">
+                <form method="post" action="" id="cCasefileForm">
                   <div class="user-box">
                     <input type="text" name="title" title="Insert casefile's title" required>
                     <label>Title</label>
